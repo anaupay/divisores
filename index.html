@@ -5,6 +5,7 @@
     
 <p>Ingrese un número entero : <input type="text" id="demo1"></p>
 <p> <button onclick="divisores()">Divisores</button> : <span id="demo2" >  0 </span> </p>
+<p> <button onclick="divisoresSumar()">Sumar Divisores</button> : <span id="demo3" >  0 </span> </p>
 
 <script>
 
@@ -18,9 +19,17 @@ for (let i=1;i<n; i++){
         divi.push(i)
     }
 }
-
+dd = divi
 document.getElementById('demo2').textContent = divi.join('; ')
 
+}
+
+function divisoresSumar(){
+    let suma = 0
+    for (let i=0; i<dd.length; i++){
+        suma = suma + dd[i]
+    }
+    document.getElementById('demo3').textContent = suma
 }
 
 </script>
